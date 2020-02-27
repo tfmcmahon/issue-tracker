@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const users = require('./routes/users')
 const projects = require('./routes/projects')
 const issues = require('./routes/issues')
+const path = require('path')
 
 const connectionString = require('config').get('Config.mongoURI')
 
@@ -27,11 +28,11 @@ app.use('/api/issues', issues)
 
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
-  app.use(express.static('client/build'));
+  app.use(express.static('client/build'))
 
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
+  })
 }
 
 const port = process.env.PORT || 5000
