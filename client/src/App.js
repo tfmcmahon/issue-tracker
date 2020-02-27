@@ -6,7 +6,7 @@ import { setCurrentUser, logoutUser } from './actions/authActions'
 import { Provider } from 'react-redux'
 import store from './store'
 import './App.css'
-import 'bootstrap/dist/css/issuetrackercustom.css'
+import './issuetrackercustom.css'
 
 import Landing from './components/layout/Landing'
 import Nav from './components/layout/Nav'
