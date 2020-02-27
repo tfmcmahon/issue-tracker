@@ -21,13 +21,24 @@ class Nav extends Component {
     render() {
         return (
             <header className="App-header">
-                <Link to="/" className="headerLink">
-                    <div className="headerHelpType">
-                        <p className="headerProjectTitle">Issue</p>
-                        <p className="headerProjectTitle">Tracker</p>
-                        <p className="headerProjectTitle">App</p>
-                    </div>
-                </Link>
+                <div className="headerHelp">
+                    <Link to="/" className="headerLink">
+                        <div className="headerHelpType">
+                            <p className="headerProjectTitle">Issue</p>
+                            <p className="headerProjectTitle">Tracker</p>
+                            <p className="headerProjectTitle">App</p>
+                        </div>
+                    </Link>
+                    <div className="verticalRuleSmallWhite"></div>
+                    <a 
+                        class='headerGithub' 
+                        href='https://github.com/tfmcmahon/issue-tracker'
+                        rel='noopener' 
+                        target='_blank'
+                    >
+                        <i class="fab fa-github-square fa-2x"></i>
+                    </a>
+                </div>
                 <div className="headerHelp">
                     {this.props.auth.isAuthenticated === true && 
                         <Link to="/dashboard"> 
@@ -53,7 +64,7 @@ class Nav extends Component {
                         >
                         Login
                         </button>
-                </Link>}
+                    </Link>}
                 </div>
             </header> 
         )

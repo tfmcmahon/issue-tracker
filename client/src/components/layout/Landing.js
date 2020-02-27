@@ -32,6 +32,15 @@ class Landing extends Component {
         <div className="landing">
           <p className="lightText"><b className="boldText">Issue Tracker App: </b> A full stack web application</p>
           <p className="subText">Created using React, Mongoose, Node, and Express</p>
+          <p className="subText">
+            <a
+              href='https://github.com/tfmcmahon/issue-tracker'
+              rel='noopener' 
+              target='_blank'
+            >
+              <b className="smallboldTextUpperBlue"> See the source code on Github</b>
+            </a>
+          </p>
           {this.state.auth.isAuthenticated !== true ?
             <div className="landingButtonsWrapper">
               <Link to='/login'>

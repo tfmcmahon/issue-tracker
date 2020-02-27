@@ -165,6 +165,7 @@ a:hover {
   text-transform: uppercase;
   margin-top: -.2em;
   margin-bottom: 0em;
+  margin-right: 1em;
   font-weight: bold;
 }
 
@@ -193,6 +194,16 @@ a:hover {
 
 .blueTextWrapper + .blueTextWrapper {
   margin-top: -1em;
+}
+
+.headerGithub {
+  padding-left: 1em;
+  align-self: center;
+}
+
+.headerGithub:hover {
+  opacity: 70%;
+  transform: scale(1);
 }
 
 /*------------------------------- Buttons -------------------------------*/
@@ -386,6 +397,10 @@ h5 { font-size: var(--fs-h3) }
   margin-top: -1.25em;
   color: var(--clr-dark);
   font-size: var(--fs-body);
+}
+
+.subText + .subText {
+  margin-top: -.85em;
 }
 
 .blueFill {
