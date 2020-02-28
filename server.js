@@ -5,7 +5,7 @@ const projects = require('./routes/projects')
 const issues = require('./routes/issues')
 const path = require('path')
 
-const connectionString = require('config').get('Config.mongoURI')
+//const connectionString = require('config').get('Config.mongoURI')
 
 const app = express()
 app.use(express.json())
