@@ -2,7 +2,7 @@
 const router = require('express').Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const keys = require('config').get('Config.passport')
+const keys = process.env.PASSPORT_SECRET || require('config').get('Config.passport')
 
 //Load input validation
 const validateRegisterInput = require('../validation/register')

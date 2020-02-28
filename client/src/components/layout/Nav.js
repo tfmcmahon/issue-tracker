@@ -31,12 +31,12 @@ class Nav extends Component {
                     </Link>
                     <div className="verticalRuleSmallWhite"></div>
                     <a 
-                        class='headerGithub' 
+                        className='headerGithub' 
                         href='https://github.com/tfmcmahon/issue-tracker'
                         rel='noopener' 
                         target='_blank'
                     >
-                        <i class="fab fa-github-square fa-2x"></i>
+                        <i className="fab fa-github-square fa-2x"></i>
                     </a>
                 </div>
                 <div className="headerHelp">

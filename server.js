@@ -3,9 +3,10 @@ const mongoose = require('mongoose')
 const users = require('./routes/users')
 const projects = require('./routes/projects')
 const issues = require('./routes/issues')
+const passport = require("passport")
 const path = require('path')
 
-//const connectionString = require('config').get('Config.mongoURI')
+const connectionString = require('config').get('Config.mongoURI')
 
 const app = express()
 app.use(express.json())
@@ -21,6 +22,11 @@ mongoose
   )
   .then(() => console.log('MongoDB successfully connected'))
   .catch(err => console.log(err))
+
+// Passport middleware
+app.use(passport.initialize());
+// Passport config
+require('./config/passport')(passport)
 
 app.use('/api/users', users)
 app.use('/api/dashboard', projects)
