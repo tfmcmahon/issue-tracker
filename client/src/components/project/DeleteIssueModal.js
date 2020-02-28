@@ -4,9 +4,6 @@ import { connect } from 'react-redux'
 import { deleteIssue } from '../../actions/issueActions'
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap'
 
-const currentProject = window.location.pathname.replace(/\/dashboard\//, "")
-const currentProjectArr = currentProject.split("/")
-
 class DeleteIssueModal extends Component {
     state = {
       modal: false
@@ -20,7 +17,8 @@ class DeleteIssueModal extends Component {
     
     onSubmit = event => {
         event.preventDefault()
-
+        const currentProject = window.location.pathname.replace(/\/dashboard\//, "")
+        const currentProjectArr = currentProject.split("/")
         const issueData = {
             project: currentProjectArr[1],
             user: this.props.auth.user.name,
