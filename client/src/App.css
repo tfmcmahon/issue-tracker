@@ -955,7 +955,7 @@ img {
 
 .footerLink:hover,
 .socialListLink:hover {
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 .footerLink:hover {
