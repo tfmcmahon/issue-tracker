@@ -9,7 +9,7 @@ function Footer() {
                     <a 
                         className='socialListLink' 
                         href='https://www.linkedin.com/in/tfmcmahon/'
-                        rel='noopener' 
+                        rel="noopener noreferrer"
                         target='_blank'
                     >
                         <i className="fab fa-linkedin"></i>
@@ -20,7 +20,7 @@ function Footer() {
                     <a 
                         className='socialListLink' 
                         href='https://github.com/tfmcmahon'
-                        rel='noopener' 
+                        rel="noopener noreferrer"
                         target='_blank'
                     >
                         <i className="fab fa-github-square"></i>
@@ -31,7 +31,7 @@ function Footer() {
                     <a 
                         className='socialListLink' 
                         href='https://codepen.io/tfmcmahon'
-                        rel='noopener' 
+                        rel="noopener noreferrer" 
                         target='_blank'
                     >
                         <i className="fab fa-codepen"></i>
@@ -42,7 +42,7 @@ function Footer() {
                     <a 
                         className='socialListLink'
                         href='https://glitch.com/@tfmcmahon'
-                        rel='noopener' 
+                        rel="noopener noreferrer"
                         target='_blank'
                     >
                         <i className="fas fa-fish"></i>

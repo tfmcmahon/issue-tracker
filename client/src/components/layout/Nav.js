@@ -33,7 +33,7 @@ class Nav extends Component {
                     <a 
                         className='headerGithub' 
                         href='https://github.com/tfmcmahon/issue-tracker'
-                        rel='noopener' 
+                        rel="noopener noreferrer"
                         target='_blank'
                     >
                         <i className="fab fa-github-square fa-2x"></i>

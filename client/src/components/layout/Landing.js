@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import Transition from './transition1.svg'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import ReactFreezeframe from 'react-freezeframe'
+import closeDelete from '../../images/CloseDelete.gif'
+import createEdit from '../../images/CreateEdit.gif'
+import projectShare from '../../images/ProjectShare.gif'
+import registerLogin from '../../images/RegisterLogin.gif'
 
 class Landing extends Component {
   constructor() {
@@ -35,7 +40,7 @@ class Landing extends Component {
           <p className="subText">
             <a
               href='https://github.com/tfmcmahon/issue-tracker'
-              rel='noopener' 
+              rel="noopener noreferrer"
               target='_blank'
             >
               <b className="smallboldTextUpperBlue"> See the source code on Github</b>
@@ -66,6 +71,59 @@ class Landing extends Component {
         }
         </div>
         <img src={Transition} alt="transition graphic" className="landingImage"></img>
+        <div className="walkThroughIntro">  
+          <p>
+              Check out the app features below. Hover over the images to see them in action:
+          </p>
+          <div className="horizontalRuleLanding"></div>
+        </div>
+        <div className="walkthroughWrapper">
+          <div className="walkthroughItem">
+            <h3 className="walkThroughName">Users</h3>
+            <div className="gif">
+              <ReactFreezeframe src={registerLogin} />
+            </div>
+            <p className="walkThroughText">
+              Users can create an account with a username, email, and password. 
+              The app uses JSON Web tokens for authentication.
+            </p>
+          </div>
+
+          <div className="walkthroughItem">
+            <h3 className="walkThroughName">Projects</h3>
+            <div className="gif">
+              <ReactFreezeframe src={projectShare} />
+            </div>
+            <p className="walkThroughText">
+              Create projects, which act as containers for issues.
+              Projects can be shared with other users. 
+              Projects that have been shared can have issues added and edited by collaborating users.
+            </p>
+          </div>
+
+          <div className="walkthroughItem">
+            <h3 className="walkThroughName">Issues</h3>
+            <div className="gif">
+              <ReactFreezeframe src={createEdit} />
+            </div>
+            <p className="walkThroughText">
+              Create issues within a project.
+              Issues can have any of their fields updated at any time.
+            </p>
+          </div>
+
+          <div className="walkthroughItem">
+            <h3 className="walkThroughName">Close and delete</h3>
+            <div className="gif">
+              <ReactFreezeframe src={closeDelete} />
+            </div>
+            <p className="walkThroughText">
+              Issues and projects can also be closed and/or deleted.
+              Closed issues can be reopened. Deleted issues and projects can't be seen by collaborating users and cannot be restored.
+            </p>
+          </div>
+
+        </div>
       </div>
     )
   }
